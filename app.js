@@ -1,11 +1,12 @@
 const btn = $('button');
 const input = $('input');
-const fact = $('h2')
+const factList = $('ul')
 
 async function fetchData(num) {
     const baseURL = `http://numbersapi.com/${num}/trivia?json`;
     const resp = await axios.get(baseURL);
-    fact.text(resp.data.text);
+    console.log(resp.data.text);
+    factList.append(`<li>${resp.data.text}</li>`);
 }
 
 btn.on('click', function(e) {e.preventDefault()});
