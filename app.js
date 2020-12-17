@@ -26,3 +26,7 @@ async function fetchData() {
 btn.on('click', function(e) {e.preventDefault()});
 btn.on('click', fetchData);
 clear.on('click', () => factList.empty());
+
+function addOne(x) {
+    return x + 1; 
+}
